@@ -80,8 +80,7 @@ useHead({
 
                         <!-- Imagem -->
                         <div class="flex justify-center lg:w-1/2">
-                            <img src="../assets/logo_large.jpg"
-                                class="max-w-md drop-shadow-[0_15px_25px_rgba(0,0,0,0.35)]">
+                            <img src="../assets/logo_large.jpg" class="w-11/12 sm:w-4/5 md:max-w-md h-auto">
                         </div>
 
                     </div>
@@ -422,8 +421,8 @@ useHead({
 
             </div>
         </section>
-        <section class="bg-[#292e47]">
-            <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <section class="overflow-hidden bg-[#292e47]">
+            <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
 
                 <!-- Cabeçalho -->
                 <div class="max-w-3xl">
@@ -432,33 +431,33 @@ useHead({
                         Contato
                     </span>
 
-                    <h2 class="mt-4 text-4xl font-extrabold leading-tight text-white lg:text-6xl">
+                    <h2 class="mt-4 text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-6xl">
                         SOLICITE SEU ORÇAMENTO
                     </h2>
 
-                    <p class="mt-6 text-lg leading-8 text-gray-300">
+                    <p class="mt-6 text-base leading-7 text-gray-300 sm:text-lg sm:leading-8">
                         Descreva o que você precisa. Resposta rápida e sem compromisso.
                     </p>
 
                 </div>
 
-                <div class="mt-16 grid gap-12 lg:grid-cols-2">
+                <div class="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-16">
 
                     <!-- Informações -->
-                    <div class="space-y-6">
+                    <div class="space-y-5">
 
-                        <div class="flex gap-4 rounded-2xl bg-white/5 p-6">
+                        <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
-                                class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-400 font-bold text-[#292e47]">
+                                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
                                 📱
                             </div>
 
-                            <div>
+                            <div class="min-w-0">
                                 <h3 class="font-semibold text-white">
                                     WhatsApp
                                 </h3>
 
-                                <p class="mt-1 text-gray-300">
+                                <p class="mt-1 break-words text-gray-300">
                                     (12) 99645-4531
                                 </p>
 
@@ -468,52 +467,52 @@ useHead({
                             </div>
                         </div>
 
-                        <div class="flex gap-4 rounded-2xl bg-white/5 p-6">
+                        <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
-                                class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-400 font-bold text-[#292e47]">
+                                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
                                 📷
                             </div>
 
-                            <div>
+                            <div class="min-w-0">
                                 <h3 class="font-semibold text-white">
                                     Instagram
                                 </h3>
 
-                                <p class="mt-1 text-gray-300">
+                                <p class="mt-1 break-words text-gray-300">
                                     @rongmanutencao
                                 </p>
                             </div>
                         </div>
 
-                        <div class="flex gap-4 rounded-2xl bg-white/5 p-6">
+                        <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
-                                class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-400 font-bold text-[#292e47]">
+                                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
                                 ✉️
                             </div>
 
-                            <div>
+                            <div class="min-w-0">
                                 <h3 class="font-semibold text-white">
                                     E-mail
                                 </h3>
 
-                                <p class="mt-1 text-gray-300">
+                                <p class="mt-1 break-all text-gray-300">
                                     rong.manutencoes@gmail.com
                                 </p>
                             </div>
                         </div>
 
-                        <div class="flex gap-4 rounded-2xl bg-white/5 p-6">
+                        <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
-                                class="flex h-12 w-12 items-center justify-center rounded-xl bg-yellow-400 font-bold text-[#292e47]">
+                                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
                                 📍
                             </div>
 
-                            <div>
+                            <div class="min-w-0">
                                 <h3 class="font-semibold text-white">
                                     Atendimento
                                 </h3>
 
-                                <p class="mt-1 text-gray-300">
+                                <p class="mt-1 break-words text-gray-300">
                                     São José dos Campos e Vale do Paraíba
                                 </p>
                             </div>
@@ -522,7 +521,7 @@ useHead({
                     </div>
 
                     <!-- Formulário -->
-                    <form class="rounded-3xl bg-white p-8 shadow-2xl">
+                    <form class="w-full rounded-3xl bg-white p-5 shadow-2xl sm:p-8">
 
                         <div class="grid gap-6">
 
@@ -551,7 +550,6 @@ useHead({
 
                                 <select
                                     class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-yellow-400">
-
                                     <option selected disabled>
                                         Selecione uma opção
                                     </option>
@@ -562,7 +560,6 @@ useHead({
                                     <option>Circuito para Ar-condicionado</option>
                                     <option>Eletromecânica / Motores</option>
                                     <option>Outro</option>
-
                                 </select>
                             </div>
 
@@ -572,11 +569,11 @@ useHead({
                                 </label>
 
                                 <textarea rows="5" placeholder="Descreva seu problema ou serviço desejado..."
-                                    class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-yellow-400"></textarea>
+                                    class="w-full resize-none rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-yellow-400"></textarea>
                             </div>
 
                             <button
-                                class="mt-2 rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-[#292e47] transition hover:bg-yellow-300">
+                                class="mt-2 w-full rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-[#292e47] transition hover:bg-yellow-300">
                                 Enviar solicitação
                             </button>
 
