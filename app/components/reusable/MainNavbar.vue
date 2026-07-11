@@ -5,7 +5,7 @@ const menuOpen = ref(false)
 <template>
   <nav
   class="
-    absolute
+    sticky
     top-0
     left-0
     right-0
