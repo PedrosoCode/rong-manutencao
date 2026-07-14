@@ -30,16 +30,21 @@ useHead({
         <MainNavbar></MainNavbar>
 
         <div class="
+        relative
+        overflow-hidden
         min-h-screen
         bg-[#292e47]
         bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)]
         bg-[size:40px_40px]
-        ">
-            <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                <div class="py-30">
-                    <div class="flex flex-col items-center gap-16 lg:flex-row lg:justify-center">
+    ">
+            <!-- Marca d'água -->
+            <img src="../assets/logo_sem_bg.png" alt="" aria-hidden="true"
+                class="pointer-events-none absolute inset-0 m-auto w-[80vw] max-w-[850px] opacity-[0.10] select-none" />
 
-                        <!-- Texto -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="py-30">
+                    <div class="flex justify-center">
+
                         <div class="max-w-2xl">
 
                             <div class="text-5xl font-extrabold leading-tight text-white lg:text-7xl">
@@ -49,8 +54,9 @@ useHead({
                             </div>
 
                             <div class="mt-8 max-w-xl text-lg leading-8 text-gray-300">
-                                Instalações, reparos e manutenção elétrica residencial e comercial.
-                                Profissional certificado, orçamento transparente, trabalho garantido.
+                                Serviços elétricos residenciais, comerciais e industriais.
+                                Contamos com certificados, oferecemos orçamentos transparentes
+                                e emitimos Nota Fiscal eletrônica. Garantimos a qualidade do trabalho.
                             </div>
 
                             <div class="mt-10 flex flex-wrap gap-4">
@@ -70,17 +76,6 @@ useHead({
                                 </button>
                             </div>
 
-                            <div class="mt-10 flex flex-col gap-3 text-gray-300 sm:flex-row sm:flex-wrap sm:gap-8">
-                                <span>✔ CRT-SP Certificado</span>
-                                <span>✔ NR10 Qualificado</span>
-                                <span>✔ Orçamento transparente</span>
-                            </div>
-
-                        </div>
-
-                        <!-- Imagem -->
-                        <div class="flex justify-center lg:w-1/2">
-                            <img src="../assets/logo_large.jpg" class="w-11/12 sm:w-4/5 md:max-w-md h-auto">
                         </div>
 
                     </div>
@@ -91,27 +86,13 @@ useHead({
         <section class="bg-white">
             <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
 
-                <!-- Cabeçalho -->
-                <div class="max-w-3xl">
-
-                    <span class="font-semibold uppercase tracking-widest text-yellow-500">
-                        O que fazemos
-                    </span>
-
-                    <h2 class="mt-4 text-4xl font-extrabold leading-tight text-[#292e47] lg:text-6xl">
-                        Nossos serviços
-                    </h2>
-
-                    <p class="mt-6 text-lg leading-8 text-gray-600">
-                        Consulte-nos para outros serviços e soluções em projetos elétricos.
-                        Atendemos residências, comércios e pequenas indústrias com foco
-                        em segurança, qualidade e acabamento profissional.
-                    </p>
-
-                </div>
+                <h2 class="mt-4 text-4xl font-extrabold leading-tight text-[#292e47] lg:text-6xl">
+                    Nossos serviços
+                </h2>
 
                 <!-- Cards -->
-                <div class="mt-16 grid gap-8 md:grid-cols-2">
+                <div class="mt-5 grid gap-8 md:grid-cols-2">
+
 
                     <div
                         class="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:border-yellow-400 hover:shadow-lg">
@@ -123,8 +104,8 @@ useHead({
                         </h3>
 
                         <p class="mt-4 leading-7 text-gray-600">
-                            Iluminação, tomadas, ventiladores, chuveiros e interruptores
-                            com execução segura, organizada e seguindo as normas técnicas.
+                            Iluminação, tomadas, ventiladores, chuveiros e interruptores. A execução é segura,
+                            organizada e em conformidade com as normas técnicas vigentes.
                         </p>
 
                     </div>
@@ -139,8 +120,8 @@ useHead({
                         </h3>
 
                         <p class="mt-4 leading-7 text-gray-600">
-                            Montagem, modernização e balanceamento de carga.
-                            Instalação de disjuntores DIN, DR e DPS para maior proteção.
+                            Quadros de energia (QDC, QGBT, QDLF, entre outros):
+                            Oferecemos serviços de montagem, modernização, adequação, reparo e dimensionamento.
                         </p>
 
                     </div>
@@ -172,10 +153,25 @@ useHead({
 
                         <p class="mt-4 leading-7 text-gray-600">
                             Instalação e manutenção de motores monofásicos,
-                            trifásicos e portões eletrônicos.
+                            trifásicos.
                         </p>
 
                     </div>
+
+                </div>
+
+                <!-- Cabeçalho -->
+                <div class="max-w-3xl mt-10">
+
+                    <span class="font-semibold uppercase tracking-widest text-yellow-500">
+                        O que fazemos
+                    </span>
+
+                    <p class="mt-6 text-lg leading-8 text-gray-600">
+                        Consulte-nos para outros serviços e soluções em projetos elétricos.
+                        Atendemos residências, comércios e pequenas indústrias com foco
+                        em segurança, qualidade e acabamento profissional.
+                    </p>
 
                 </div>
 
@@ -245,7 +241,17 @@ useHead({
                                     ✓
                                 </div>
                                 <span class="text-gray-700">
-                                    Técnico em Automação Industrial (Etec)
+                                    Registro no CRT-SP Ativo.
+                                </span>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-bold text-[#292e47]">
+                                    ✓
+                                </div>
+                                <span class="text-gray-700">
+                                    Seguro RC Ativo.
                                 </span>
                             </div>
 
@@ -265,7 +271,7 @@ useHead({
                                     ✓
                                 </div>
                                 <span class="text-gray-700">
-                                    NR10 · NR12 · NR33 · NR35
+                                    Técnico em Automação Industrial (Etec)
                                 </span>
                             </div>
 
@@ -275,7 +281,18 @@ useHead({
                                     ✓
                                 </div>
                                 <span class="text-gray-700">
-                                    Técnico em Mecânica (CEPHAS)
+                                    Técnico em mecânica.
+                                </span>
+                            </div>
+
+
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-bold text-[#292e47]">
+                                    ✓
+                                </div>
+                                <span class="text-gray-700">
+                                    Cursos válidos nas Normas Regulamentadoras NR10, NR12, NR33, NR35 e SEP.
                                 </span>
                             </div>
 
@@ -285,17 +302,7 @@ useHead({
                                     ✓
                                 </div>
                                 <span class="text-gray-700">
-                                    CRT-SP — Certificado e Qualificado
-                                </span>
-                            </div>
-
-                            <div class="flex items-start gap-3">
-                                <div
-                                    class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-bold text-[#292e47]">
-                                    ✓
-                                </div>
-                                <span class="text-gray-700">
-                                    Protocolo LOTO (Lockout/Tagout)
+                                    Serviços executados em conformidade com o protocolo LOTO.
                                 </span>
                             </div>
 
@@ -371,8 +378,7 @@ useHead({
                             </h3>
 
                             <p class="mt-4 leading-7 text-gray-600">
-                                Medição e análise de corrente para identificação de
-                                falhas, garantindo um diagnóstico preciso e seguro.
+                                Análise do circuito, elaboração da tese de modernização e apresentação para o cliente.
                             </p>
 
                         </div>
@@ -395,8 +401,8 @@ useHead({
                             </h3>
 
                             <p class="mt-4 leading-7 text-gray-600">
-                                Disjuntores Siemens, barramento organizado, identificação
-                                dos circuitos e acabamento profissional.
+                                A execução será realizada em conformidade com o plano previamente apresentado ao
+                                cliente, visando a eficácia e a eficiência.
                             </p>
 
                         </div>
@@ -448,14 +454,15 @@ useHead({
 
                         <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
-                                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
-                                📱
+                                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-[#292e47]">
+                                <img src="../assets/whats_logo_no_bg.webp" alt="WhatsApp"
+                                    class="h-7 w-auto object-contain" />
                             </div>
 
                             <div class="min-w-0">
-                                <h3 class="font-semibold text-white">
+                                <div class="font-semibold text-white">
                                     WhatsApp
-                                </h3>
+                                </div>
 
                                 <p class="mt-1 break-words text-gray-300">
                                     (12) 99645-4531
@@ -470,7 +477,8 @@ useHead({
                         <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
-                                📷
+                                <img src="../assets/insta_logo_no_bg.webp" alt="WhatsApp"
+                                    class="h-7 w-auto object-contain" />
                             </div>
 
                             <div class="min-w-0">
@@ -487,7 +495,8 @@ useHead({
                         <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
-                                ✉️
+                                <img src="../assets/mail.png" alt="WhatsApp"
+                                    class="h-7 w-auto object-contain" />
                             </div>
 
                             <div class="min-w-0">
@@ -504,7 +513,8 @@ useHead({
                         <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
-                                📍
+                                <img src="../assets/pin-png-28.png" alt="WhatsApp"
+                                    class="h-7 w-auto object-contain" />
                             </div>
 
                             <div class="min-w-0">
