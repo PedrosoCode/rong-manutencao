@@ -236,20 +236,20 @@ useHead({
                         <div class="mt-12 grid gap-5 sm:grid-cols-2">
 
                             <div class="flex items-start gap-3">
-                                <div
-                                    class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-bold text-[#292e47]">
-                                    ✓
-                                </div>
+                               <div
+        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+        ✓
+    </div>
                                 <span class="text-gray-700">
                                     Registro no CRT-SP Ativo.
                                 </span>
                             </div>
 
                             <div class="flex items-start gap-3">
-                                <div
-                                    class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-bold text-[#292e47]">
-                                    ✓
-                                </div>
+                               <div
+        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+        ✓
+    </div>
                                 <span class="text-gray-700">
                                     Seguro RC Ativo.
                                 </span>
@@ -257,9 +257,9 @@ useHead({
 
                             <div class="flex items-start gap-3">
                                 <div
-                                    class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-bold text-[#292e47]">
-                                    ✓
-                                </div>
+        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+        ✓
+    </div>
                                 <span class="text-gray-700">
                                     Graduando em Engenharia Mecânica (Estácio)
                                 </span>
@@ -267,9 +267,9 @@ useHead({
 
                             <div class="flex items-start gap-3">
                                 <div
-                                    class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-bold text-[#292e47]">
-                                    ✓
-                                </div>
+        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+        ✓
+    </div>
                                 <span class="text-gray-700">
                                     Técnico em Automação Industrial (Etec)
                                 </span>
@@ -277,9 +277,9 @@ useHead({
 
                             <div class="flex items-start gap-3">
                                 <div
-                                    class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-bold text-[#292e47]">
-                                    ✓
-                                </div>
+        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+        ✓
+    </div>
                                 <span class="text-gray-700">
                                     Técnico em mecânica.
                                 </span>
@@ -288,9 +288,9 @@ useHead({
 
                             <div class="flex items-start gap-3">
                                 <div
-                                    class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-bold text-[#292e47]">
-                                    ✓
-                                </div>
+        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+        ✓
+    </div>
                                 <span class="text-gray-700">
                                     Cursos válidos nas Normas Regulamentadoras NR10, NR12, NR33, NR35 e SEP.
                                 </span>
@@ -298,9 +298,9 @@ useHead({
 
                             <div class="flex items-start gap-3">
                                 <div
-                                    class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-400 font-bold text-[#292e47]">
-                                    ✓
-                                </div>
+        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+        ✓
+    </div>
                                 <span class="text-gray-700">
                                     Serviços executados em conformidade com o protocolo LOTO.
                                 </span>
