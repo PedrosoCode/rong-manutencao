@@ -35,21 +35,21 @@ const menuOpen = ref(false)
         </a>
 
         <a
-          href="/sobre"
+          href="/"
           class="flex h-10 items-center rounded-lg px-4 text-gray-400 transition-colors duration-200 hover:bg-gray-100"
         >
           Sobre
         </a>
 
         <a
-          href="/sobre"
+          href="/"
           class="flex h-10 items-center rounded-lg px-4 text-gray-400 transition-colors duration-200 hover:bg-gray-100"
         >
           trabalhos
         </a>
 
         <a
-          href="/contato"
+          href="/"
           class="flex h-10 items-center bg-yellow-400 px-5 text-blue-950 transition duration-200 hover:bg-blue-700"
         >
           Contato
@@ -106,21 +106,21 @@ const menuOpen = ref(false)
           </a>
 
           <a
-            href="/sobre"
+            href="/"
             class="rounded-lg px-3 py-2 transition hover:bg-gray-100"
           >
             Sobre
           </a>
 
           <a
-            href="/sobre"
+            href="/"
             class="rounded-lg px-3 py-2 transition hover:bg-gray-100"
           >
             Trabalhos
           </a>
 
           <a
-            href="/contato"
+            href="/"
             class="mt-2  bg-yellow-400 px-3 py-2 text-center text-blue-950 transition hover:bg-blue-700"
           >
             Contato
