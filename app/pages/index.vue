@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import MainNavbar from '~/components/reusable/MainNavbar.vue';
+import MainFooter from '~/components/reusable/MainFooter.vue';
 
 useSeoMeta({
     title: 'Empresa | Soluções Profissionais',
@@ -163,9 +164,9 @@ useHead({
                 <!-- Cabeçalho -->
                 <div class="max-w-3xl mt-10">
 
-                    <span class="font-semibold uppercase tracking-widest text-yellow-500">
+                    <!-- <span class="font-semibold uppercase tracking-widest text-yellow-500">
                         O que fazemos
-                    </span>
+                    </span> -->
 
                     <p class="mt-6 text-lg leading-8 text-gray-600">
                         Consulte-nos para outros serviços e soluções em projetos elétricos.
@@ -236,20 +237,20 @@ useHead({
                         <div class="mt-12 grid gap-5 sm:grid-cols-2">
 
                             <div class="flex items-start gap-3">
-                               <div
-        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
-        ✓
-    </div>
+                                <div
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+                                    ✓
+                                </div>
                                 <span class="text-gray-700">
                                     Registro no CRT-SP Ativo.
                                 </span>
                             </div>
 
                             <div class="flex items-start gap-3">
-                               <div
-        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
-        ✓
-    </div>
+                                <div
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+                                    ✓
+                                </div>
                                 <span class="text-gray-700">
                                     Seguro RC Ativo.
                                 </span>
@@ -257,29 +258,29 @@ useHead({
 
                             <div class="flex items-start gap-3">
                                 <div
-        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
-        ✓
-    </div>
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+                                    ✓
+                                </div>
                                 <span class="text-gray-700">
-                                    Graduando em Engenharia Mecânica (Estácio)
+                                    Graduando em Engenharia Mecânica
                                 </span>
                             </div>
 
                             <div class="flex items-start gap-3">
                                 <div
-        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
-        ✓
-    </div>
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+                                    ✓
+                                </div>
                                 <span class="text-gray-700">
-                                    Técnico em Automação Industrial (Etec)
+                                    Técnico em Automação Industrial
                                 </span>
                             </div>
 
                             <div class="flex items-start gap-3">
                                 <div
-        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
-        ✓
-    </div>
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+                                    ✓
+                                </div>
                                 <span class="text-gray-700">
                                     Técnico em mecânica.
                                 </span>
@@ -288,9 +289,9 @@ useHead({
 
                             <div class="flex items-start gap-3">
                                 <div
-        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
-        ✓
-    </div>
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+                                    ✓
+                                </div>
                                 <span class="text-gray-700">
                                     Cursos válidos nas Normas Regulamentadoras NR10, NR12, NR33, NR35 e SEP.
                                 </span>
@@ -298,9 +299,9 @@ useHead({
 
                             <div class="flex items-start gap-3">
                                 <div
-        class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
-        ✓
-    </div>
+                                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-yellow-400 text-base font-bold leading-none text-[#292e47]">
+                                    ✓
+                                </div>
                                 <span class="text-gray-700">
                                     Serviços executados em conformidade com o protocolo LOTO.
                                 </span>
@@ -495,8 +496,7 @@ useHead({
                         <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
-                                <img src="../assets/mail.png" alt="WhatsApp"
-                                    class="h-7 w-auto object-contain" />
+                                <img src="../assets/mail.png" alt="WhatsApp" class="h-7 w-auto object-contain" />
                             </div>
 
                             <div class="min-w-0">
@@ -513,8 +513,7 @@ useHead({
                         <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
-                                <img src="../assets/pin-png-28.png" alt="WhatsApp"
-                                    class="h-7 w-auto object-contain" />
+                                <img src="../assets/pin-png-28.png" alt="WhatsApp" class="h-7 w-auto object-contain" />
                             </div>
 
                             <div class="min-w-0">
@@ -595,6 +594,6 @@ useHead({
 
             </div>
         </section>
-
+         <MainFooter />
     </main>
 </template>
