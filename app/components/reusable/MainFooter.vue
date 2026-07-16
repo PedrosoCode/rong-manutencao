@@ -31,26 +31,28 @@
                     <a
                         href="https://wa.me/5512996454531"
                         target="_blank"
-                        class="text-gray-400 transition hover:text-yellow-400">
+                        rel="noopener"
+                        class="opacity-70 transition hover:opacity-100">
 
-                        <i class="pi pi-whatsapp text-xl"></i>
+                        <img src="../../assets/whats_logo_no_bg.webp" alt="WhatsApp" class="h-6 w-auto object-contain" />
 
                     </a>
 
                     <a
-                        href="https://instagram.com/rongmanutencao"
+                        href="https://instagram.com/rongmanutencoes"
                         target="_blank"
-                        class="text-gray-400 transition hover:text-yellow-400">
+                        rel="noopener"
+                        class="opacity-70 transition hover:opacity-100">
 
-                        <i class="pi pi-instagram text-xl"></i>
+                        <img src="../../assets/insta_logo_no_bg.webp" alt="Instagram" class="h-6 w-auto object-contain" />
 
                     </a>
 
                     <a
-                        href="mailto:rong.manutencoes@gmail.com"
-                        class="text-gray-400 transition hover:text-yellow-400">
+                        href="mailto:administrativo@rongmanutencoes.com.br"
+                        class="opacity-70 transition hover:opacity-100">
 
-                        <i class="pi pi-envelope text-xl"></i>
+                        <img src="../../assets/mail.png" alt="E-mail" class="h-6 w-auto object-contain" />
 
                     </a>
 

@@ -1,6 +1,21 @@
 <script setup lang="ts">
-import MainNavbar from '~/components/reusable/MainNavbar.vue';
-import MainFooter from '~/components/reusable/MainFooter.vue';
+const whatsappNumber = '5512996454531'
+const heroWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá! Gostaria de solicitar um orçamento com a Rong Manutenções.')}`
+
+const nome = ref('')
+const servico = ref('')
+const mensagem = ref('')
+
+function enviarWhatsapp() {
+    const partes = [`Olá! Meu nome é ${nome.value}.`, `Serviço desejado: ${servico.value}.`]
+
+    if (mensagem.value) {
+        partes.push(mensagem.value)
+    }
+
+    const texto = encodeURIComponent(partes.join(' '))
+    window.open(`https://wa.me/${whatsappNumber}?text=${texto}`, '_blank')
+}
 
 useSeoMeta({
     title: 'Empresa | Soluções Profissionais',
@@ -27,8 +42,6 @@ useHead({
 
 <template>
     <main>
-
-        <MainNavbar></MainNavbar>
 
         <div class="
         relative
@@ -61,20 +74,20 @@ useHead({
                             </div>
 
                             <div class="mt-10 flex flex-wrap gap-4">
-                                <button
+                                <a href="#contato"
                                     class="rounded-lg bg-yellow-400 px-6 py-3 font-semibold text-black transition hover:bg-yellow-300">
                                     Solicitar orçamento
-                                </button>
+                                </a>
 
-                                <button
+                                <a href="#servicos"
                                     class="rounded-lg border border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-black">
                                     Nossos serviços
-                                </button>
+                                </a>
 
-                                <button
+                                <a :href="heroWhatsappLink" target="_blank" rel="noopener"
                                     class="rounded-lg border border-gray-500 px-6 py-3 font-semibold text-gray-300 transition hover:border-white hover:text-white">
                                     WhatsApp
-                                </button>
+                                </a>
                             </div>
 
                         </div>
@@ -84,7 +97,7 @@ useHead({
             </div>
         </div>
 
-        <section class="bg-white">
+        <section id="servicos" class="bg-white">
             <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
 
                 <h2 class="mt-4 text-4xl font-extrabold leading-tight text-[#292e47] lg:text-6xl">
@@ -192,16 +205,16 @@ useHead({
 
                     </div>
 
-                    <button
+                    <a href="#contato"
                         class="rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-[#292e47] transition hover:bg-yellow-300">
                         Falar agora
-                    </button>
+                    </a>
 
                 </div>
 
             </div>
         </section>
-        <section class="bg-gray-50">
+        <section id="sobre" class="bg-gray-50">
             <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
 
                 <div class="grid gap-20 lg:grid-cols-2 lg:items-center">
@@ -340,7 +353,7 @@ useHead({
 
             </div>
         </section>
-        <section class="bg-white">
+        <section id="trabalhos" class="bg-white">
             <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
 
                 <!-- Cabeçalho -->
@@ -419,16 +432,16 @@ useHead({
                         Quer um serviço com esse mesmo padrão de qualidade?
                     </p>
 
-                    <button
-                        class="mt-8 rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-[#292e47] transition hover:bg-yellow-300">
+                    <a href="#contato"
+                        class="mt-8 inline-block rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-[#292e47] transition hover:bg-yellow-300">
                         Solicitar orçamento
-                    </button>
+                    </a>
 
                 </div>
 
             </div>
         </section>
-        <section class="overflow-hidden bg-[#292e47]">
+        <section id="contato" class="overflow-hidden bg-[#292e47]">
             <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
 
                 <!-- Cabeçalho -->
@@ -488,7 +501,7 @@ useHead({
                                 </h3>
 
                                 <p class="mt-1 break-words text-gray-300">
-                                    @rongmanutencao
+                                    @rongmanutencoes
                                 </p>
                             </div>
                         </div>
@@ -505,7 +518,7 @@ useHead({
                                 </h3>
 
                                 <p class="mt-1 break-all text-gray-300">
-                                    rong.manutencoes@gmail.com
+                                    administrativo@rongmanutencoes.com.br
                                 </p>
                             </div>
                         </div>
@@ -530,7 +543,7 @@ useHead({
                     </div>
 
                     <!-- Formulário -->
-                    <form class="w-full rounded-3xl bg-white p-5 shadow-2xl sm:p-8">
+                    <form class="w-full rounded-3xl bg-white p-5 shadow-2xl sm:p-8" @submit.prevent="enviarWhatsapp">
 
                         <div class="grid gap-6">
 
@@ -539,16 +552,7 @@ useHead({
                                     Nome
                                 </label>
 
-                                <input type="text" placeholder="Seu nome"
-                                    class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-yellow-400">
-                            </div>
-
-                            <div>
-                                <label class="mb-2 block font-medium text-[#292e47]">
-                                    Telefone
-                                </label>
-
-                                <input type="text" placeholder="(12) 99999-9999"
+                                <input type="text" placeholder="Seu nome" v-model="nome" required
                                     class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-yellow-400">
                             </div>
 
@@ -557,9 +561,9 @@ useHead({
                                     Tipo de serviço
                                 </label>
 
-                                <select
+                                <select v-model="servico" required
                                     class="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-yellow-400">
-                                    <option selected disabled>
+                                    <option value="" disabled>
                                         Selecione uma opção
                                     </option>
 
@@ -577,13 +581,13 @@ useHead({
                                     Mensagem
                                 </label>
 
-                                <textarea rows="5" placeholder="Descreva seu problema ou serviço desejado..."
+                                <textarea rows="5" placeholder="Descreva seu problema ou serviço desejado..." v-model="mensagem"
                                     class="w-full resize-none rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-yellow-400"></textarea>
                             </div>
 
-                            <button
+                            <button type="submit"
                                 class="mt-2 w-full rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-[#292e47] transition hover:bg-yellow-300">
-                                Enviar solicitação
+                                Enviar solicitação pelo WhatsApp
                             </button>
 
                         </div>
@@ -594,6 +598,5 @@ useHead({
 
             </div>
         </section>
-         <MainFooter />
     </main>
 </template>

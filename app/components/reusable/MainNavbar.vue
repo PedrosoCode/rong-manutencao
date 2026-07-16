@@ -1,5 +1,7 @@
 <script setup>
 const menuOpen = ref(false)
+
+const whatsappLink = `https://wa.me/5512996454531?text=${encodeURIComponent('Olá! Gostaria de solicitar um orçamento com a Rong Manutenções.')}`
 </script>
 
 <template>
@@ -28,31 +30,33 @@ const menuOpen = ref(false)
       <!-- Desktop -->
       <div class="hidden items-center gap-2 md:flex">
         <a
-          href="/"
+          href="/#servicos"
           class="flex h-10 items-center rounded-lg px-4 text-gray-400 transition-colors duration-200 hover:bg-gray-100"
         >
           Serviços
         </a>
 
         <a
-          href="/"
+          href="/#sobre"
           class="flex h-10 items-center rounded-lg px-4 text-gray-400 transition-colors duration-200 hover:bg-gray-100"
         >
           Sobre
         </a>
 
         <a
-          href="/"
+          href="/#trabalhos"
           class="flex h-10 items-center rounded-lg px-4 text-gray-400 transition-colors duration-200 hover:bg-gray-100"
         >
-          trabalhos
+          Trabalhos
         </a>
 
         <a
-          href="/"
-          class="flex h-10 items-center bg-yellow-400 px-5 text-blue-950 transition duration-200 hover:bg-blue-700"
+          :href="whatsappLink"
+          target="_blank"
+          rel="noopener"
+          class="flex h-10 items-center gap-2 bg-yellow-400 px-5 text-blue-950 transition duration-200 hover:bg-blue-700"
         >
-          Contato
+          WhatsApp
         </a>
       </div>
 
@@ -99,31 +103,33 @@ const menuOpen = ref(false)
         <div class="flex flex-col p-4">
 
           <a
-            href="/"
+            href="/#servicos"
             class="rounded-lg px-3 py-2 transition hover:bg-gray-100"
           >
             Serviços
           </a>
 
           <a
-            href="/"
+            href="/#sobre"
             class="rounded-lg px-3 py-2 transition hover:bg-gray-100"
           >
             Sobre
           </a>
 
           <a
-            href="/"
+            href="/#trabalhos"
             class="rounded-lg px-3 py-2 transition hover:bg-gray-100"
           >
             Trabalhos
           </a>
 
           <a
-            href="/"
-            class="mt-2  bg-yellow-400 px-3 py-2 text-center text-blue-950 transition hover:bg-blue-700"
+            :href="whatsappLink"
+            target="_blank"
+            rel="noopener"
+            class="mt-2 bg-yellow-400 px-3 py-2 text-center text-blue-950 transition hover:bg-blue-700"
           >
-            Contato
+            WhatsApp
           </a>
 
         </div>
