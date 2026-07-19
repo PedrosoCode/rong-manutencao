@@ -9,7 +9,7 @@
                 <div class="flex items-center gap-4">
 
                     <img
-                        src="../../assets//logo_sem_bg.png"
+                        src="../../assets/logo_sem_bg.png"
                         alt="Rong Manutenções"
                         class="h-12 w-12 rounded object-contain" />
 
@@ -21,6 +21,10 @@
                         <p class="text-sm uppercase tracking-[0.25em] text-yellow-400">
                             Serviços em Eletricidade
                         </p>
+
+                        <a href="/about/" class="mt-1 inline-block text-sm text-gray-400 underline-offset-2 hover:text-white hover:underline">
+                            Sobre a empresa
+                        </a>
                     </div>
 
                 </div>

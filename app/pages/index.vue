@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { SITE_URL, OG_IMAGE } from '~/utils/seo'
+
 const whatsappNumber = '5512996454531'
 const heroWhatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá! Gostaria de solicitar um orçamento com a Rong Manutenções.')}`
 
@@ -17,31 +19,99 @@ function enviarWhatsapp() {
     window.open(`https://wa.me/${whatsappNumber}?text=${texto}`, '_blank')
 }
 
+const title = 'Rong Manutenções | Eletricista em São José dos Campos e Vale do Paraíba'
+const description =
+    'Serviços elétricos residenciais, comerciais e industriais com orçamento transparente, técnico certificado (CRT-SP) e Nota Fiscal eletrônica. Atendimento em São José dos Campos e Vale do Paraíba.'
+
 useSeoMeta({
-    title: 'Empresa | Soluções Profissionais',
-    description:
-        'Conheça nossos serviços e descubra como podemos ajudar seu negócio com soluções modernas e eficientes.',
-    ogTitle: 'Empresa | Soluções Profissionais',
-    ogDescription:
-        'Conheça nossos serviços e descubra como podemos ajudar seu negócio.',
-    twitterCard: 'summary_large_image'
+    title,
+    description,
+    ogTitle: title,
+    ogDescription: description,
+    ogType: 'website',
+    ogUrl: `${SITE_URL}/`,
+    ogImage: OG_IMAGE,
+    ogImageAlt: 'Rong Manutenções — serviços elétricos',
+    ogLocale: 'pt_BR',
+    ogSiteName: 'Rong Manutenções',
+    twitterCard: 'summary_large_image',
+    twitterTitle: title,
+    twitterDescription: description,
+    twitterImage: OG_IMAGE,
+    robots: 'index, follow',
 })
 
 useHead({
-    htmlAttrs: {
-        lang: 'pt-BR'
-    },
     link: [
         {
             rel: 'canonical',
-            href: 'https://seusite.com/'
+            href: `${SITE_URL}/`
         }
-    ]
+    ],
+    script: [
+        {
+            type: 'application/ld+json',
+            innerHTML: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                    {
+                        '@type': 'Question',
+                        name: 'Quais regiões vocês atendem?',
+                        acceptedAnswer: {
+                            '@type': 'Answer',
+                            text: 'Atendemos São José dos Campos e toda a região do Vale do Paraíba.',
+                        },
+                    },
+                    {
+                        '@type': 'Question',
+                        name: 'Vocês emitem Nota Fiscal?',
+                        acceptedAnswer: {
+                            '@type': 'Answer',
+                            text: 'Sim, emitimos Nota Fiscal eletrônica para todos os serviços realizados.',
+                        },
+                    },
+                    {
+                        '@type': 'Question',
+                        name: 'Como funciona o orçamento?',
+                        acceptedAnswer: {
+                            '@type': 'Answer',
+                            text: 'O orçamento é claro e apresentado antes do início de qualquer trabalho, sem compromisso.',
+                        },
+                    },
+                    {
+                        '@type': 'Question',
+                        name: 'Que tipo de serviço elétrico vocês realizam?',
+                        acceptedAnswer: {
+                            '@type': 'Answer',
+                            text: 'Realizamos instalações e reparos elétricos residenciais, comerciais e industriais, incluindo quadros de energia (QDC, QGBT, QDLF), circuitos específicos para ar-condicionado e fogão por indução, e eletromecânica de motores monofásicos e trifásicos.',
+                        },
+                    },
+                    {
+                        '@type': 'Question',
+                        name: 'Os serviços têm garantia?',
+                        acceptedAnswer: {
+                            '@type': 'Answer',
+                            text: 'Sim. Cada serviço é executado com diagnóstico preciso, seguindo normas regulamentadoras, e o resultado tem garantia.',
+                        },
+                    },
+                    {
+                        '@type': 'Question',
+                        name: 'Como posso solicitar um orçamento?',
+                        acceptedAnswer: {
+                            '@type': 'Answer',
+                            text: 'Basta preencher o formulário do site ou chamar diretamente no WhatsApp (12) 99645-4531.',
+                        },
+                    },
+                ],
+            }),
+        },
+    ],
 })
 </script>
 
 <template>
-    <main>
+    <div>
 
         <div class="
         relative
@@ -52,7 +122,7 @@ useHead({
         bg-[size:40px_40px]
     ">
             <!-- Marca d'água -->
-            <img src="../assets/logo_sem_bg.png" alt="" aria-hidden="true"
+            <img src="../assets/logo_branca.png" alt="" aria-hidden="true"
                 class="pointer-events-none absolute inset-0 m-auto w-[80vw] max-w-[850px] opacity-[0.10] select-none" />
 
             <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -61,11 +131,11 @@ useHead({
 
                         <div class="max-w-2xl">
 
-                            <div class="text-5xl font-extrabold leading-tight text-white lg:text-7xl">
+                            <h1 class="text-5xl font-extrabold leading-tight text-white lg:text-7xl">
                                 ELETRICIDADE <br>
                                 COM RIGOR <br>
                                 E SEGURANÇA.
-                            </div>
+                            </h1>
 
                             <div class="mt-8 max-w-xl text-lg leading-8 text-gray-300">
                                 Serviços elétricos residenciais, comerciais e industriais.
@@ -322,6 +392,11 @@ useHead({
 
                         </div>
 
+                        <a href="/about/"
+                            class="mt-10 inline-block font-semibold text-yellow-600 underline-offset-4 hover:underline">
+                            Conheça mais sobre nossa trajetória e certificações →
+                        </a>
+
                     </div>
 
                     <!-- Imagens -->
@@ -329,10 +404,12 @@ useHead({
 
                         <div class="grid grid-cols-2 gap-6">
 
-                            <img src="../assets/quadro_1.jpg" alt="Diego Rong"
+                            <img src="../assets/quadro_1.jpg" alt="Diagnóstico de quadro elétrico com alicate amperímetro"
+                                loading="lazy"
                                 class="h-[420px] w-full rounded-3xl object-cover shadow-xl">
 
-                            <img src="../assets/quadro_2.jpg" alt="Serviço realizado"
+                            <img src="../assets/quadro_2.jpg" alt="Quadro de distribuição elétrica aberto para manutenção"
+                                loading="lazy"
                                 class="mt-12 h-[420px] w-full rounded-3xl object-cover shadow-xl">
 
                         </div>
@@ -382,6 +459,7 @@ useHead({
 
                         <div class="overflow-hidden">
                             <img src="../assets/quadro_3.jpg" alt="Inspeção de quadro elétrico"
+                                loading="lazy"
                                 class="h-80 w-full object-cover transition duration-500 group-hover:scale-105">
                         </div>
 
@@ -405,6 +483,7 @@ useHead({
 
                         <div class="overflow-hidden">
                             <img src="../assets/quadro_4.jpg" alt="Montagem de quadro de distribuição"
+                                loading="lazy"
                                 class="h-80 w-full object-cover transition duration-500 group-hover:scale-105">
                         </div>
 
@@ -436,6 +515,81 @@ useHead({
                         class="mt-8 inline-block rounded-xl bg-yellow-400 px-8 py-4 font-semibold text-[#292e47] transition hover:bg-yellow-300">
                         Solicitar orçamento
                     </a>
+
+                </div>
+
+            </div>
+        </section>
+        <section id="faq" class="bg-gray-50">
+            <div class="mx-auto max-w-4xl px-6 py-24 lg:px-8">
+
+                <span class="font-semibold uppercase tracking-widest text-yellow-500">
+                    Dúvidas
+                </span>
+
+                <h2 class="mt-4 text-4xl font-extrabold leading-tight text-[#292e47] lg:text-5xl">
+                    Perguntas frequentes
+                </h2>
+
+                <div class="mt-12 space-y-8">
+
+                    <article>
+                        <h3 class="text-xl font-bold text-[#292e47]">
+                            Quais regiões vocês atendem?
+                        </h3>
+                        <p class="mt-2 leading-7 text-gray-600">
+                            Atendemos São José dos Campos e toda a região do Vale do Paraíba.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-xl font-bold text-[#292e47]">
+                            Vocês emitem Nota Fiscal?
+                        </h3>
+                        <p class="mt-2 leading-7 text-gray-600">
+                            Sim, emitimos Nota Fiscal eletrônica para todos os serviços realizados.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-xl font-bold text-[#292e47]">
+                            Como funciona o orçamento?
+                        </h3>
+                        <p class="mt-2 leading-7 text-gray-600">
+                            O orçamento é claro e apresentado antes do início de qualquer trabalho, sem compromisso.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-xl font-bold text-[#292e47]">
+                            Que tipo de serviço elétrico vocês realizam?
+                        </h3>
+                        <p class="mt-2 leading-7 text-gray-600">
+                            Instalações e reparos elétricos residenciais, comerciais e industriais, quadros de
+                            energia (QDC, QGBT, QDLF), circuitos específicos para ar-condicionado e fogão por
+                            indução, e eletromecânica de motores monofásicos e trifásicos.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-xl font-bold text-[#292e47]">
+                            Os serviços têm garantia?
+                        </h3>
+                        <p class="mt-2 leading-7 text-gray-600">
+                            Sim. Cada serviço é executado com diagnóstico preciso, seguindo normas
+                            regulamentadoras, e o resultado tem garantia.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3 class="text-xl font-bold text-[#292e47]">
+                            Como posso solicitar um orçamento?
+                        </h3>
+                        <p class="mt-2 leading-7 text-gray-600">
+                            Basta preencher o formulário do site ou chamar diretamente no WhatsApp
+                            (12) 99645-4531.
+                        </p>
+                    </article>
 
                 </div>
 
@@ -474,9 +628,9 @@ useHead({
                             </div>
 
                             <div class="min-w-0">
-                                <div class="font-semibold text-white">
+                                <h3 class="font-semibold text-white">
                                     WhatsApp
-                                </div>
+                                </h3>
 
                                 <p class="mt-1 break-words text-gray-300">
                                     (12) 99645-4531
@@ -491,7 +645,7 @@ useHead({
                         <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
-                                <img src="../assets/insta_logo_no_bg.webp" alt="WhatsApp"
+                                <img src="../assets/insta_logo_no_bg.webp" alt="Instagram"
                                     class="h-7 w-auto object-contain" />
                             </div>
 
@@ -509,7 +663,7 @@ useHead({
                         <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
-                                <img src="../assets/mail.png" alt="WhatsApp" class="h-7 w-auto object-contain" />
+                                <img src="../assets/mail.png" alt="E-mail" class="h-7 w-auto object-contain" />
                             </div>
 
                             <div class="min-w-0">
@@ -526,7 +680,7 @@ useHead({
                         <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
-                                <img src="../assets/pin-png-28.png" alt="WhatsApp" class="h-7 w-auto object-contain" />
+                                <img src="../assets/pin-png-28.png" alt="Área de atendimento" class="h-7 w-auto object-contain" />
                             </div>
 
                             <div class="min-w-0">
@@ -598,5 +752,5 @@ useHead({
 
             </div>
         </section>
-    </main>
+    </div>
 </template>
