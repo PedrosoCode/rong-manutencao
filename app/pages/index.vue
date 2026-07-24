@@ -620,7 +620,11 @@ useHead({
                     <!-- Informações -->
                     <div class="space-y-5">
 
-                        <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
+                        <a
+                            :href="heroWhatsappLink"
+                            target="_blank"
+                            rel="noopener"
+                            class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 transition hover:bg-white/10 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-[#292e47]">
                                 <img src="../assets/whats_logo_no_bg.webp" alt="WhatsApp"
@@ -640,9 +644,13 @@ useHead({
                                     Resposta rápida
                                 </span>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
+                        <a
+                            href="https://instagram.com/rongmanutencoes"
+                            target="_blank"
+                            rel="noopener"
+                            class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 transition hover:bg-white/10 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
                                 <img src="../assets/insta_logo_no_bg.webp" alt="Instagram"
@@ -658,9 +666,11 @@ useHead({
                                     @rongmanutencoes
                                 </p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
+                        <a
+                            href="mailto:administrativo@rongmanutencoes.com.br"
+                            class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 transition hover:bg-white/10 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
                                 <img src="../assets/mail.png" alt="E-mail" class="h-7 w-auto object-contain" />
@@ -675,9 +685,13 @@ useHead({
                                     administrativo@rongmanutencoes.com.br
                                 </p>
                             </div>
-                        </div>
+                        </a>
 
-                        <div class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 sm:p-6">
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=S%C3%A3o+Jos%C3%A9+dos+Campos%2C+SP"
+                            target="_blank"
+                            rel="noopener"
+                            class="flex min-w-0 gap-4 rounded-2xl bg-white/5 p-5 transition hover:bg-white/10 sm:p-6">
                             <div
                                 class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-yellow-400 text-xl text-[#292e47]">
                                 <img src="../assets/pin-png-28.png" alt="Área de atendimento" class="h-7 w-auto object-contain" />
@@ -692,7 +706,7 @@ useHead({
                                     São José dos Campos e Vale do Paraíba
                                 </p>
                             </div>
-                        </div>
+                        </a>
 
                     </div>
 
